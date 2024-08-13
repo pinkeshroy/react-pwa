@@ -2,7 +2,7 @@
 
 **React project into a Progressive Web Application (PWA)**
 
-*Folder Structure*
+#Folder Structure
 ``` 
 
 react-app-name
@@ -44,7 +44,7 @@ react-app-name
     └── tsconfig.json
 ``` 
 
-1. Configure the Manifest: Update the public/manifest.json with the details specific to your app. This includes icons, the app name, start URL, display type, and theme colors.
+# 1. Configure the Manifest: Update the public/manifest.json with the details specific to your app. This includes icons, the app name, start URL, display type, and theme colors.
 ``` 
 {
   "short_name": "react-app",
@@ -74,7 +74,7 @@ react-app-name
 
 ``` 
 
-2. Implementing the Service Worker:
+# 2. Implementing the Service Worker:
    
   2.1 -> Service Worker Setup: Use the src/service-worker.ts for setting up the caching strategies for your app. This includes precaching assets and handling runtime caching.
     
@@ -313,7 +313,7 @@ const isLocalhost = Boolean(
   }
 ``` 
 
-3. Modify index.tsx for PWA: Ensure serviceWorker.register(); is called in your index.tsx to activate the service worker when the app is loaded.
+# 3. Modify index.tsx for PWA: Ensure serviceWorker.register(); is called in your index.tsx to activate the service worker when the app is loaded.
 ```   {
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -343,17 +343,17 @@ reportWebVitals();}
 
 ``` 
 
-4. Dependencies: Install the necessary Workbox libraries that facilitate the service worker functionality by running this command in your project directory:
+# 4. Dependencies: Install the necessary Workbox libraries that facilitate the service worker functionality by running this command in your project directory:
 ``` npm install workbox-core workbox-expiration workbox-precaching workbox-routing workbox-strategies``` 
 
-5. Testing: After implementing the above changes, test the app in both development and production modes to ensure that the service worker is functioning as expected. Make sure to test 
+# 5. Testing: After implementing the above changes, test the app in both development and production modes to ensure that the service worker is functioning as expected. Make sure to test 
    offline capabilities and update handling.
 
-6. Optimization and Best Practices: Review the PWA criteria using Lighthouse in Chrome DevTools to ensure your app meets all the recommended guidelines for a Progressive Web 
+# 6. Optimization and Best Practices: Review the PWA criteria using Lighthouse in Chrome DevTools to ensure your app meets all the recommended guidelines for a Progressive Web 
    Application.
 
 
-**Progressive Web Application (PWA) into a Trusted Web Activity (TWA) using Bubblewrap**
+# **Progressive Web Application (PWA) into a Trusted Web Activity (TWA) using Bubblewrap**
 
 Prerequisites
   Before starting, ensure you have Node.js installed. You will also need the Java Development Kit (JDK) (https://adoptium.net/en-GB/temurin/releases/?version=17&package=jdk) and the Android SDK command-line tools to proceed(https://developer.android.com/studio#command-line-tools-only).
