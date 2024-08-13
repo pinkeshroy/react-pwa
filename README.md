@@ -1,3 +1,9 @@
+
+## Authors
+
+**[@pinkeshroy](https://www.github.com/pinkeshroy)**
+
+
 # react-pwa
 
 **React project into a Progressive Web Application (PWA)**
@@ -354,8 +360,10 @@ reportWebVitals();}
 # **Progressive Web Application (PWA) into a Trusted Web Activity (TWA) using Bubblewrap**
 
 Prerequisites
-  Before starting, ensure you have Node.js installed. You will also need the Java Development Kit (JDK) [Link](https://adoptium.net/en-GB/temurin/releases/?version=17&package=jdk) and the Android SDK command-line tools to proceed[Link](https://developer.android.com/studio#command-line-tools-only).
-Also deploy your app on `netlify.com`  or somewhere as your choice
+- Before starting, ensure you have Node.js installed. 
+- You will also need the Java Development Kit (JDK) [Link](https://adoptium.net/en-GB/temurin/releases/?version=17&package=jdk) 
+- The Android SDK command-line tools to proceed[Link](https://developer.android.com/studio#command-line-tools-only).
+- Also deploy your app on `netlify.com`  or somewhere as your choice
 
 ``` 
 1. Install Bubblewrap CLI
@@ -398,27 +406,27 @@ This command compiles your project into an APK file that can be distributed thro
 
 *_Tips for TWA_*
 
-Ensure your PWA is served over HTTPS, as this is a requirement for TWA.
-Verify your PWA with Digital Asset Links to ensure the Android app can prove ownership of the PWA.
-Test the TWA on multiple Android devices to ensure compatibility and performance.
+- Ensure your PWA is served over HTTPS, as this is a requirement for TWA.
+- Verify your PWA with Digital Asset Links to ensure the Android app can prove ownership of the PWA.
+- Test the TWA on multiple Android devices to ensure compatibility and performance.
 
 Post-Build Steps
 
-Test your APK on different devices to ensure it works correctly.
-Publish your APK to the Google Play Store following their publishing guidelines.
-Monitor the performance of your app in the Play Console and make necessary updates or optimizations.
-This documentation provides a step-by-step approach to converting your PWA to a TWA using Bubblewrap, ensuring a smooth transition and successful deployment on the Android platform.
+- Test your APK on different devices to ensure it works correctly.
+- Publish your APK to the Google Play Store following their publishing guidelines.
+- Monitor the performance of your app in the Play Console and make necessary updates or optimizations.
+- This documentation provides a step-by-step approach to converting your PWA to a TWA using Bubblewrap, ensuring a smooth transition and successful deployment on the Android platform.
 
 
 # **_Additional Resources_**
 
 Converting Logos for App Manifest
 
-When preparing your Progressive Web Application (PWA) or Trusted Web Activity (TWA), it's essential to have appropriately sized icons that comply with the specifications of manifest.json. These icons are used across various platforms where your app is installed or featured. To ensure your logos meet these requirements, you can use online tools to convert and optimize them.
+- When preparing your Progressive Web Application (PWA) or Trusted Web Activity (TWA), it's essential to have appropriately sized icons that comply with the specifications of manifest.json. These icons are used across various platforms where your app is installed or featured. To ensure your logos meet these requirements, you can use online tools to convert and optimize them.
 
 Recommended Tool:
 
-Favicon Converter: This online tool allows you to convert standard image files into icons suitable for use in your app's manifest.json. You can access the tool at Favicon.io Favicon Converter.
+- Favicon Converter: This online tool allows you to convert standard image files into icons suitable for use in your app's manifest.json. You can access the tool at Favicon.io Favicon Converter.
 
 _Steps to Convert Your Logo:_
 
