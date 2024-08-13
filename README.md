@@ -313,7 +313,7 @@ const isLocalhost = Boolean(
   }
 ``` 
 
-# 3. Modify _index.tsx_ for PWA: Ensure _serviceWorker.register()_; is called in your index.tsx to activate the service worker when the app is loaded.
+# 3. Modify _index.tsx_ for PWA: Ensure _serviceWorker.register()_ is called in your index.tsx to activate the service worker when the app is loaded.
 ```   {
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -354,7 +354,7 @@ reportWebVitals();}
 # **Progressive Web Application (PWA) into a Trusted Web Activity (TWA) using Bubblewrap**
 
 Prerequisites
-  Before starting, ensure you have Node.js installed. You will also need the Java Development Kit (JDK) (https://adoptium.net/en-GB/temurin/releases/?version=17&package=jdk) and the Android SDK command-line tools to proceed(https://developer.android.com/studio#command-line-tools-only).
+  Before starting, ensure you have Node.js installed. You will also need the Java Development Kit (JDK) [Link](https://adoptium.net/en-GB/temurin/releases/?version=17&package=jdk) and the Android SDK command-line tools to proceed[Link](https://developer.android.com/studio#command-line-tools-only).
 Also deploy your app on `netlify.com`  or somewhere as your choice
 
 ``` 
@@ -422,7 +422,7 @@ Favicon Converter: This online tool allows you to convert standard image files i
 
 _Steps to Convert Your Logo:_
 
-1. Visit the Website: Go to https://favicon.io/favicon-converter/.
+1. Visit the Website: Go to [Documentation](https://favicon.io/favicon-converter/) .
 2. Upload Your Logo: Select and upload your original high-resolution logo file.
 3. Specify Icon Requirements: Choose the sizes and formats that you need for your app's manifest. Typical sizes include 192x192 for Android devices and 512x512 for splash screens and app launch icons.
 4. Download the Converted Files: Once the conversion is complete, download the generated favicon files.
