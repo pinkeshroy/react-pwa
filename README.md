@@ -51,7 +51,7 @@ react-app-name
 ``` 
 
 # 1. Configure the Manifest:
-- Update the _public/manifest.json_ with the details specific to your app. This includes icons, the app name, start URL, display type, and theme colors.
+- Update the `public/manifest.json` with the details specific to your app. This includes icons, the app name, start URL, display type, and theme colors.
 ``` 
 {
   "short_name": "react-app",
@@ -83,7 +83,7 @@ react-app-name
 
 # 2. Implementing the Service Worker:
    
-- Service Worker Setup: Use the _src/service-worker.ts_ for setting up the caching strategies for your app. This includes precaching assets and handling runtime caching.
+- Service Worker Setup: Use the `src/service-worker.ts` for setting up the caching strategies for your app. This includes precaching assets and handling runtime caching.
     
 ``` /// <reference lib="webworker" />
 /* eslint-disable no-restricted-globals */
@@ -167,7 +167,7 @@ self.addEventListener('message', (event) => {
 // Any other custom service worker logic
 ``` 
 
- -  Registration: Use the _src/serviceWorkerRegistration.ts_ to handle the registration and updates of the service worker. This is configured to work differently based on whether the app is hosted on localhost or a production server.
+ -  Registration: Use the `src/serviceWorkerRegistration.ts` to handle the registration and updates of the service worker. This is configured to work differently based on whether the app is hosted on localhost or a production server.
    ``` 
     // This optional code is used to register a service worker.
 // register() is not called by default.
@@ -321,7 +321,7 @@ const isLocalhost = Boolean(
 ``` 
 
 # 3. Modify _index.tsx_ for PWA: 
-- Ensure _serviceWorker.register()_ is called in your index.tsx to activate the service worker when the app is loaded.
+- Ensure `serviceWorker.register()` is called in your index.tsx to activate the service worker when the app is loaded.
 ```   {
 import React from "react";
 import ReactDOM from "react-dom/client";
