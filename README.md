@@ -50,7 +50,8 @@ react-app-name
     └── tsconfig.json
 ``` 
 
-# 1. Configure the Manifest: Update the _public/manifest.json_ with the details specific to your app. This includes icons, the app name, start URL, display type, and theme colors.
+# 1. Configure the Manifest:
+- Update the _public/manifest.json_ with the details specific to your app. This includes icons, the app name, start URL, display type, and theme colors.
 ``` 
 {
   "short_name": "react-app",
@@ -82,7 +83,7 @@ react-app-name
 
 # 2. Implementing the Service Worker:
    
-  2.1 -> Service Worker Setup: Use the _src/service-worker.ts_ for setting up the caching strategies for your app. This includes precaching assets and handling runtime caching.
+- Service Worker Setup: Use the _src/service-worker.ts_ for setting up the caching strategies for your app. This includes precaching assets and handling runtime caching.
     
 ``` /// <reference lib="webworker" />
 /* eslint-disable no-restricted-globals */
@@ -166,7 +167,7 @@ self.addEventListener('message', (event) => {
 // Any other custom service worker logic
 ``` 
 
- 2.2  -> Registration: Use the _src/serviceWorkerRegistration.ts_ to handle the registration and updates of the service worker. This is configured to work differently based on whether the app is hosted on localhost or a production server.
+ -  Registration: Use the _src/serviceWorkerRegistration.ts_ to handle the registration and updates of the service worker. This is configured to work differently based on whether the app is hosted on localhost or a production server.
    ``` 
     // This optional code is used to register a service worker.
 // register() is not called by default.
@@ -319,7 +320,8 @@ const isLocalhost = Boolean(
   }
 ``` 
 
-# 3. Modify _index.tsx_ for PWA: Ensure _serviceWorker.register()_ is called in your index.tsx to activate the service worker when the app is loaded.
+# 3. Modify _index.tsx_ for PWA: 
+- Ensure _serviceWorker.register()_ is called in your index.tsx to activate the service worker when the app is loaded.
 ```   {
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -349,12 +351,15 @@ reportWebVitals();}
 
 ``` 
 
-# 4. Dependencies: Install the necessary Workbox libraries that facilitate the service worker functionality by running this command in your project directory:
+# 4. Dependencies: 
+- Install the necessary Workbox libraries that facilitate the service worker functionality by running this command in your project directory:
 ``` npm install workbox-core workbox-expiration workbox-precaching workbox-routing workbox-strategies``` 
 
-# 5. Testing: After implementing the above changes, test the app in both development and production modes to ensure that the service worker is functioning as expected. Make sure to test offline capabilities and update handling.
+# 5. Testing: 
+- After implementing the above changes, test the app in both development and production modes to ensure that the service worker is functioning as expected. Make sure to test offline capabilities and update handling.
 
-# 6. Optimization and Best Practices: Review the PWA criteria using Lighthouse in Chrome DevTools to ensure your app meets all the recommended guidelines for a Progressive Web Application.
+# 6. Optimization and Best Practices: 
+- Review the PWA criteria using Lighthouse in Chrome DevTools to ensure your app meets all the recommended guidelines for a Progressive Web Application.
 
 
 # **Progressive Web Application (PWA) into a Trusted Web Activity (TWA) using Bubblewrap**
