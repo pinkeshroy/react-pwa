@@ -3,7 +3,9 @@
 **React project into a Progressive Web Application (PWA)**
 
 *Folder Structure*
-`react-app-name
+``` 
+
+react-app-name
 │
 ├── public
 │   ├── favicon.ico
@@ -40,10 +42,10 @@
     ├── package.json
     ├── README.md
     └── tsconfig.json
-`
+``` 
 
 1. Configure the Manifest: Update the public/manifest.json with the details specific to your app. This includes icons, the app name, start URL, display type, and theme colors.
-`
+``` 
 {
   "short_name": "react-app",
   "name": "react-app",
@@ -70,13 +72,13 @@
   "background_color": "#ffffff"
 }
 
-`
+``` 
 
 2. Implementing the Service Worker:
    
-  -> Service Worker Setup: Use the src/service-worker.ts for setting up the caching strategies for your app. This includes precaching assets and handling runtime caching.
-     ``` 
-     /// <reference lib="webworker" />
+  2.1 -> Service Worker Setup: Use the src/service-worker.ts for setting up the caching strategies for your app. This includes precaching assets and handling runtime caching.
+    
+``` /// <reference lib="webworker" />
 /* eslint-disable no-restricted-globals */
 
 // This service worker can be customized!
@@ -155,10 +157,10 @@ self.addEventListener('message', (event) => {
   }
 });
 
-// Any other custom service worker logic ``` 
+// Any other custom service worker logic
+``` 
 
- 2.1  -> Registration: Use the src/serviceWorkerRegistration.ts to handle the registration and updates of the service worker. This is configured to work differently based on whether the 
-    app is hosted on localhost or a production server.
+ 2.2  -> Registration: Use the src/serviceWorkerRegistration.ts to handle the registration and updates of the service worker. This is configured to work differently based on whether the app is hosted on localhost or a production server.
    ``` 
     // This optional code is used to register a service worker.
 // register() is not called by default.
@@ -308,8 +310,8 @@ const isLocalhost = Boolean(
           console.error(error.message);
         });
     }
-  }  
-   ``` 
+  }
+``` 
 
 3. Modify index.tsx for PWA: Ensure serviceWorker.register(); is called in your index.tsx to activate the service worker when the app is loaded.
 ```   {
@@ -342,8 +344,7 @@ reportWebVitals();}
 ``` 
 
 4. Dependencies: Install the necessary Workbox libraries that facilitate the service worker functionality by running this command in your project directory:
-`npm install workbox-core workbox-expiration workbox-precaching workbox-routing workbox-strategies
-`
+``` npm install workbox-core workbox-expiration workbox-precaching workbox-routing workbox-strategies``` 
 
 5. Testing: After implementing the above changes, test the app in both development and production modes to ensure that the service worker is functioning as expected. Make sure to test 
    offline capabilities and update handling.
@@ -358,11 +359,10 @@ Prerequisites
   Before starting, ensure you have Node.js installed. You will also need the Java Development Kit (JDK) (https://adoptium.net/en-GB/temurin/releases/?version=17&package=jdk) and the Android SDK command-line tools to proceed(https://developer.android.com/studio#command-line-tools-only).
 Also deploy your app on `netlify.com`  or somewhere as your choice
 
-
+``` 
 1. Install Bubblewrap CLI
 Install the Bubblewrap Command Line Interface globally using npm. This tool helps package your PWA into an Android application.
-`npm install -g @bubblewrap/cli
-`
+``` npm install -g @bubblewrap/cli ``` 
 2. Prepare the Environment
 Set up directories and download the necessary SDKs and JDK:
 `
@@ -396,7 +396,7 @@ After setting up your configuration and modifying any necessary details in the g
 `bubblewrap build
 `
 This command compiles your project into an APK file that can be distributed through the Google Play Store or other Android markets.
-
+``` 
 
 *_Tips for TWA_*
 
