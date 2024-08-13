@@ -75,7 +75,7 @@
 2. Implementing the Service Worker:
    
   -> Service Worker Setup: Use the src/service-worker.ts for setting up the caching strategies for your app. This includes precaching assets and handling runtime caching.
-     `
+     ``` 
      /// <reference lib="webworker" />
 /* eslint-disable no-restricted-globals */
 
@@ -155,11 +155,11 @@ self.addEventListener('message', (event) => {
   }
 });
 
-// Any other custom service worker logic `
+// Any other custom service worker logic ``` 
 
-  -> Registration: Use the src/serviceWorkerRegistration.ts to handle the registration and updates of the service worker. This is configured to work differently based on whether the 
+ 2.1  -> Registration: Use the src/serviceWorkerRegistration.ts to handle the registration and updates of the service worker. This is configured to work differently based on whether the 
     app is hosted on localhost or a production server.
-   `
+   ``` 
     // This optional code is used to register a service worker.
 // register() is not called by default.
 
@@ -309,10 +309,10 @@ const isLocalhost = Boolean(
         });
     }
   }  
-   `
+   ``` 
 
 3. Modify index.tsx for PWA: Ensure serviceWorker.register(); is called in your index.tsx to activate the service worker when the app is loaded.
-`
+```   {
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
@@ -337,9 +337,9 @@ serviceWorker.register();
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals();}
 
-`
+``` 
 
 4. Dependencies: Install the necessary Workbox libraries that facilitate the service worker functionality by running this command in your project directory:
 `npm install workbox-core workbox-expiration workbox-precaching workbox-routing workbox-strategies
